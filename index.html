@@ -71,6 +71,7 @@ nav: home
 					<li>Integrated <a href="http://bower.io">Bower</a></li>
 					<li>Dependency Injection</li>
 					<li>Automatic asset compilation</li>
+					<li>Share server-side code and templates with browser</li>
 				</ul>
 			</div>
 			<div class="col-lg-6">
@@ -94,7 +95,7 @@ nav: home
 
 		<pre class="prettyprint">$ npm install -g conga</pre>
 
-		<h2>Controllers</h2>
+		<h2>Example Controller</h2>
 
 		<pre class="prettyprint linenums">
 <code>/**
@@ -110,13 +111,20 @@ DefaultController.prototype = {
 	 */
 	index: function(req, res){
 		res.return({ message : "Hello World!!!" });
+	},
+
+	/**
+	 * @Route("/hello/{name}")
+	 */
+	hello: function(req, res){
+		res.return({ message : "Hello " + req.param("name") });
 	}
 };
 
 module.exports = DefaultController;
 </code></pre>
 
-		<h2>Models</h2>
+		<h2>Example Model</h2>
 
 		<pre class="prettyprint linenums">
 <code>/**

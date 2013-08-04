@@ -16,8 +16,14 @@
 				{{ content }}
 			</div>
 
-			<div class="col-lg-4">
-				
+			<div class="col-lg-4 fixed-sidebar">
+
+
+				{% capture sidebar %}
+					{% include documentation-sidebar.md %}
+				{% endcapture %}
+				{{ sidebar | unindent | markdownify }}
+
 			</div>
 
 		</div>

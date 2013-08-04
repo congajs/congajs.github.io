@@ -94,11 +94,15 @@ feature by passing in the "wrappedPagination" parameter to @RestController.
 Example:
 
 <?prettify linenums=1?>
-    @RestController(adapter="conga-bass:rest/adapter", model="User", documentManager="mongodb.default", wrappedPagination=true)
+    @RestController(adapter="conga-bass:rest/adapter", 
+                    model="User", 
+                    documentManager="mongodb.default",
+                    wrappedPagination=true)
 
 This will return an object response containing the results as an array and a "totalResults" property
 which specifies the total number of results from the data source.
 
+<?prettify?>
     {
     	"results" : [
     		{ "id" : 1, "username" : "User1", "isActive" : true },
@@ -199,7 +203,9 @@ own REST adapters and configure your controller to use them from the @RestContro
 ### Use your Adapter
 
 <?prettify linenums=1?>
-    @RestController(adapter="my-bundle:rest/my-adapter", model="User", myOption="Hello")
+    @RestController(adapter="my-bundle:rest/my-adapter", 
+                    model="User", 
+                    myOption="Hello")
 
 ## Customizing REST Serialization
 

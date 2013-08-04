@@ -255,6 +255,6 @@ Example:
 
     module.exports = UserController;
 
-    
+See the [REST Documentation](/documentation/rest.html) for more information.
 
 
