@@ -1,5 +1,5 @@
 
-* [Introduction](/documentation/introduction.html)
+* Introduction
 * [Installation](/documentation/installation.html)
 * [Configuration](/documentation/configuration.html)
 * [Controllers](/documentation/controllers.html)
@@ -11,7 +11,7 @@
 * Security
 * [Namespaces](/documentation/namespaces.html)
 * Bundles
-* [Service Container](/documentation/service-container.html)
+* Service Container
 * [CLI API](/documentation/cli.html)
 * Websockets
 * Pub/Sub
